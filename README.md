@@ -6,13 +6,25 @@ Settings persist in browser `localStorage`. The plugin is a pure web plugin — 
 
 ## Install
 
+### From npm (recommended)
+
+The package is published to the npm registry. Install it into the `web` profile:
+
 ```sh
 dsh plugin --profile web add dsh-ui-notify
 ```
 
-Then restart the profile (`dsh --profile web`) so the new package metadata is picked up.
+Then restart the profile (`dsh --profile web`) so the new package metadata is picked up. No build step is needed — the published tarball ships the built `lib/` (node half + browser client bundle + type declarations).
 
-To install straight from a git host, pin a commit and allow the `prepare` build script in the profile's `pnpm-workspace.yaml`:
+To update to a newer release:
+
+```sh
+dsh plugin --profile web up dsh-ui-notify
+```
+
+### From a git host (alternative)
+
+Use this only when you need a version that is not yet published to npm. Pin a commit and allow the `prepare` build script in the profile's `pnpm-workspace.yaml`:
 
 ```sh
 dsh plugin --profile web add github:xingke-seeker/dsh-ui-notify#<sha>
@@ -47,6 +59,10 @@ pnpm run build
 ```
 
 `pnpm run build` runs the two-project TypeScript build (node half + browser half) then bundles `lib/client.js` with tsdown. `pnpm run prepare` is the self-contained git-install build: it transpiles both halves from source without the type-checked peer graph.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ## License
 
