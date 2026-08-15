@@ -46,6 +46,10 @@ const nodeHalf: UserConfig = {
   platform: 'node',
   target: 'es2022',
   dts: false,
+  // The package declares "type": "module", so a `.js` output is ESM and
+  // matches package.json's `main`/`exports["."]`. fixedExtension would emit
+  // `.mjs` and break the git-install node half.
+  fixedExtension: false,
   clean: false,
 }
 
