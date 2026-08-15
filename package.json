@@ -86,6 +86,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.client.json --noEmit",
     "test": "vitest run",
     "verify": "node scripts/verify.mjs",
-    "prepare": "tsdown --config tsdown.prepare.config.ts"
+    "prepare": "tsdown --config tsdown.prepare.config.ts",
+    "prepublishOnly": "pnpm run build && pnpm run verify"
   }
 }

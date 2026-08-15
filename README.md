@@ -15,7 +15,7 @@ Then restart the profile (`dsh --profile web`) so the new package metadata is pi
 To install straight from a git host, pin a commit and allow the `prepare` build script in the profile's `pnpm-workspace.yaml`:
 
 ```sh
-dsh plugin --profile web add github:you/dsh-ui-notify#<sha>
+dsh plugin --profile web add github:xingke-seeker/dsh-ui-notify#<sha>
 ```
 
 ```yaml
