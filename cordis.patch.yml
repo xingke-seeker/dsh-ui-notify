@@ -1,0 +1,9 @@
+# dsh-ui-notify bundle patch (declared by the `dsh.bundle.patch` manifest
+# field): applied over the dsh-base + dsh-web-app layers when this package
+# appears in a profile's `dsh.profile.bundles` list. Inserts the browser
+# plugin row whose node half is an empty loader seat; the browser half ships
+# via exports["./client"] and is discovered through the package.json
+# dsh.client declaration.
+- insert:
+    - id: ui-notify
+      name: dsh-ui-notify
