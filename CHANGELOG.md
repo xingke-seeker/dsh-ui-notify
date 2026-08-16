@@ -4,6 +4,12 @@ All notable changes to `dsh-ui-notify` are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-08-15
+
+### Changed
+
+- Add `repository`, `homepage`, and `bugs` fields so the npm page links back to the GitHub repository (flagged by the `dsh-vet` install-time security scan).
+
 ## [0.1.0] - 2026-08-15
 
 Initial public release.
@@ -20,4 +26,5 @@ Initial public release.
 - Audio autoplay policy handling: the first user gesture unlocks audio; a completion that rang before unlock is queued and played on the next gesture.
 - Published to the npm registry as a standalone web plugin (`dsh.bundle.patch` + `dsh.client` manifest, platform `web`); no host service, tool, or session-log entry.
 
+[0.1.1]: https://github.com/xingke-seeker/dsh-ui-notify/releases/tag/v0.1.1
 [0.1.0]: https://github.com/xingke-seeker/dsh-ui-notify/releases/tag/v0.1.0

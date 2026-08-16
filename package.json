@@ -1,7 +1,7 @@
 {
   "name": "dsh-ui-notify",
   "description": "Completion sound notifications for DeepSeek Harness: plays an embedded chime when a session's output finishes, with a Notifications row in General settings. Settings persist in browser localStorage — a standalone web plugin, no Host settings dependency.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
@@ -24,6 +24,14 @@
     "CHANGELOG.md"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xingke-seeker/dsh-ui-notify.git"
+  },
+  "homepage": "https://github.com/xingke-seeker/dsh-ui-notify#readme",
+  "bugs": {
+    "url": "https://github.com/xingke-seeker/dsh-ui-notify/issues"
+  },
   "keywords": [
     "dsh",
     "dsh-plugin",
